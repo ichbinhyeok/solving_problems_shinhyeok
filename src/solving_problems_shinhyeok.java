@@ -5,10 +5,7 @@ public class solving_problems_shinhyeok {
         Quiz quiz = new Quiz();
 
         quiz.initAnswer();
-        quiz.Q01();
-        quiz.Q02();
-        quiz.Q03();
-        quiz.Q04();
+        quiz.runQuiz();
         quiz.result();
 
     }

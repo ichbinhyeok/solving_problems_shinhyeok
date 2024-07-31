@@ -84,17 +84,23 @@ public class Quiz {
             int userAnswer = answerList.get(i);
 
             Map<String, Object> questionData = quizData.get(questionNumber);
-                int correctAnswer = (int) questionData.get("answer");
-                int score = (int) questionData.get("score");
-                System.out.print(questionNumber + "번 " + userAnswer + ", ");
+            int correctAnswer = (int) questionData.get("answer");
+            int score = (int) questionData.get("score");
+            System.out.print(questionNumber + "번 " + userAnswer + ", ");
 
-                if (userAnswer == correctAnswer) {
-                    totalScore += score;
-                }
+            if (userAnswer == correctAnswer) {
+                totalScore += score;
+            }
 
         }
         return totalScore;
     }
 
+    public void runQuiz() {
+        Q01();
+        Q02();
+        Q03();
+        Q04();
 
+    }
 }

@@ -73,26 +73,27 @@ public class Quiz {
         int totalScore = 0;
         System.out.println("----- 결과 -----");
         System.out.print("응답한 내용 : ");
+        totalScore = getTotalScore(totalScore);
+        System.out.println();
+        System.out.println("당신 응답 합계: " + totalScore);
+    }
+
+    private int getTotalScore(int totalScore) {
         for (int i = 0; i < answerList.size(); i++) {
             int questionNumber = i + 1;
             int userAnswer = answerList.get(i);
 
-
             Map<String, Object> questionData = quizData.get(questionNumber);
-            if (questionData != null) {
                 int correctAnswer = (int) questionData.get("answer");
                 int score = (int) questionData.get("score");
-
                 System.out.print(questionNumber + "번 " + userAnswer + ", ");
-
 
                 if (userAnswer == correctAnswer) {
                     totalScore += score;
                 }
-            }
+
         }
-        System.out.println();
-        System.out.println("당신 응답 합계: " + totalScore);
+        return totalScore;
     }
 
 

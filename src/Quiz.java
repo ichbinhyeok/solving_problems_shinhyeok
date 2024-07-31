@@ -97,10 +97,12 @@ public class Quiz {
     }
 
     public void runQuiz() {
+        initAnswer();
         Q01();
         Q02();
         Q03();
         Q04();
+        result();
 
     }
 }

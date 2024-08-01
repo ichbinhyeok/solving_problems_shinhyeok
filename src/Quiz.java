@@ -2,10 +2,8 @@ import java.util.*;
 
 public class Quiz {
     Scanner sc = new Scanner(System.in);
-
     Map<Integer, Map<String, Object>> quizData = new HashMap<>();
     List<Integer> answerList = new ArrayList<>();
-
 
     public void initQuiz() {
         quizData.put(1, createQuestionData(2, 10, "1. Python에서 변수를 선언하는 방법은?",
